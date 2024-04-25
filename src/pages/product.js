@@ -12,7 +12,8 @@ const Product = () => {
   }, []);
   const product = trendingProducts[id];
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex flex-col justify-center gap-8 items-center">
+      <h1 className="text-3xl">Product</h1>
       <BreadCrumbs />
       {product ? (
         <div className="flex flex-col items-center gap-2">

@@ -12,13 +12,14 @@ const BreadCrumbs = () => {
       {pathnames.length > 0 && <Link to={"/"}>Home</Link>}
       {pathnames.map((name, index) => {
         breadCrumbPath += `/${name}`;
-        console.log(breadCrumbPath);
         const isLastIndex = index === pathnames.length - 1;
         return isLastIndex ? (
-          <span key={breadCrumbPath}>/ {name}</span>
+          <span key={breadCrumbPath} className="text-slate-500">
+            &gt; {name}
+          </span>
         ) : (
           <span key={breadCrumbPath}>
-            <Link to={breadCrumbPath}>/{name}</Link>
+            <Link to={breadCrumbPath}>&gt; {name}</Link>
           </span>
         );
       })}
