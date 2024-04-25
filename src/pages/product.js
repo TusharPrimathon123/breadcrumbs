@@ -18,7 +18,7 @@ const Product = () => {
       {product ? (
         <div className="flex flex-col items-center gap-2">
           <h1 className="text-3xl">{product.title}</h1>
-          <img src={product.thumbnail} />
+          <img src={product.thumbnail} alt={product.title} />
           <p>{product.description}</p>
           <h2>Rs {product.price}</h2>
         </div>
